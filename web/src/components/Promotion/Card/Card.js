@@ -1,7 +1,7 @@
 import './Card.css';
 
-const PromotionCard = ({ promotion }) => {
-  return (
+const PromotionCard = ({ promotions }) => {
+  return promotions.map((promotion) => (
     <section className="card">
       <div className="image-card">
         <img src={promotion.imageUrl} alt={promotion.title} />
@@ -30,7 +30,7 @@ const PromotionCard = ({ promotion }) => {
         </div>
       </div>
     </section>
-  );
+  ));
 };
 
 export default PromotionCard;
